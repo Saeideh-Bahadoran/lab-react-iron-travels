@@ -16,9 +16,9 @@ const TravelList = () => {
                             <div> {currentItem.description}</div>
                             <div><span className="price">Price:</span> {currentItem.totalCost} €</div>
                             <div className="labels">
-                                <div className="label">{currentItem.totalCost <= 350 && "Great Deal"}</div>
-                                <div className="label">{currentItem.totalCost >= 1500 && "Premium"}</div>
-                                <div className="label">{currentItem.allInclusive && "All Inclusive"}</div>
+                                {currentItem.totalCost <= 350 && <div className="label">Great Deal</div>}
+                                {currentItem.totalCost >= 1500 && <div className="label">Premium</div>}
+                                {currentItem.allInclusive && <div className="label">All Inclusive</div>}
                             </div>
 
 
